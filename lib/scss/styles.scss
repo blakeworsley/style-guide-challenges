@@ -1,5 +1,3 @@
-$primary-text-color: red;
-
-h1 {
-  color: $primary-text-color
-}
+@import "reset";
+@import "main";
+@import "challenges/challenge-1";

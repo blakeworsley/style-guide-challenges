@@ -1,10 +1,14 @@
 {
-  "name": "pomodoro-app",
+  "name": "style-guide-challenges",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "test": "mocha",
+    "wd": "wdio wdio.conf.js",
+    "feature-test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kerrd89/pomodoro-app.git"
+    "url": "git+https://github.com/blakeworsley/style-guide-challenges.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kerrd89/pomodoro-app/issues"
+    "url": "https://github.com/blakeworsley/style-guide-challenges/issues"
   },
-  "homepage": "https://github.com/kerrd89/pomodoro-app#readme"
+  "homepage": "https://github.com/blakeworsley/style-guide-challenges#readme"
 }
