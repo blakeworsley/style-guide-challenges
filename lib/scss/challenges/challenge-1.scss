@@ -1,71 +1,112 @@
-.dropdown header {
+
+.dropdown-a {
+  text-decoration: none;
+  color: #444444
+}
+.dropdown-item {
+  font-size: 2em;
+  font-style: italic;
+  font-family: lato;
+  padding: 25px;
+}
+
+.dropdown-header {
+  display: block;
   height: 100px;
   width: 100vw;
-  position: absolute;
+  position: relative;
   background-color: #F4F4F4;
 }
-.dropdown-circle {
+
+.dropdown-logo,
+.dropdown-nav {
+  display: inline-block;
   height: 60px;
   width: 60px;
   border-radius: 50px;
+  position: absolute;
+  top: 20px;
+}
+
+.dropdown-logo {
+  margin-left: 25px;
   background-color: #444444;
 }
-.dropdown div {
-  margin-left: 25px;
+.dropdown-nav {
+  right: 25px;
+  transition-duration: 0.15s;
 }
-.dropdown nav {
-  display: flex;
-  flex-direction: flex-row;
-  justify-content: center;
-  align-items: center;
+.dropdown-button {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition-duration: 0.15s;
+}
+.dropdown-image {
   width: 100%;
   height: 100%;
 }
-.dropdown button {
-  margin-left: auto;
-  margin-right: 25px;
-}
-.dropdown ul {
+.dropdown-list {
   display: none;
+  transition-duration: 0.25s;
 }
 
 /* on toggle */
 .dropdown-header-update {
-  height: 100vh !important;
+  height: 100vh;
 }
 .dropdown-nav-update {
-  background-color: #3af442;
-  opacity: 0.8;
-  padding-top: 25px !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-}
-.dropdown-ul{
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
   height: 100vh;
   width: 100vw;
+  border-radius: 0;
+  top: 0;
+  right: inherit;
+  position: relative;
+  background-color: #3af442;
+  opacity: 0.7;
 }
-
+.dropdown-list-update{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  // top: 0;
+}
+.dropdown-button-update {
+  // display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin: 20px 25px 0 auto;
+  z-index: 2;
+}
 
 //larger screens
 
 @media (min-width: 700px) {
-  body {
-    background: yellow;
-  }
   .dropdown-button {
     display: none;
   }
   .dropdown-item {
     display: inline-block;
-    margin: 25px;
+    font-size: 1em;
   }
   .dropdown-nav {
-    display: flex;
+    width: 60%;
+    display: inline-block;
     flex-direction: flex-row;
-    justify-content: flex-start;
-    align-items: inherit;
+    background-color: inherit;
+  }
+  .dropdown-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
   }
 }
