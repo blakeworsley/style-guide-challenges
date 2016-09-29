@@ -2,3 +2,17 @@ $main-font-color: #F2EBBF;
 $card-1-background-color: #FF5656;
 
 $card-2-background-color: #744E4E;
+
+$card-3-main-font: #294049;
+$card-3-background-color: #c69e35;
+$card-3-secondary-color: #16dd75;
+
+
+@mixin card-height() {
+  height: 450px;
+  width: 300px;
+}
+
+@mixin shadow() {
+  box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.30);
+}

@@ -1,27 +1,29 @@
 @import "./challenge-2-variables";
 
 .cards {
+  height: 100vh;
+  width: 100vw;
   background-color: #4f4f4f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  ul {
-    justify-content: center;
-  }
 }
 
 .cards-card {
-  height: 400px;
-  width: 250px;
+  @include card-height;
+  @include shadow;
   border-radius: 14px;
   margin: 10px;
-  padding: 40px;
-
   display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
 
-
+  .card-image {
+    @include card-height;
+    position: absolute;
+    opacity: 0.08;
+    border-radius: 14px;
+  }
+  .card-content{
+    padding: 40px;
+    z-index: 1;
+  }
   header {
     display: flex;
     align-items: center;
@@ -31,7 +33,6 @@
     font-family: 'Tinos', serif;
     font-weight: 700;
     font-size: 3em;
-    display: inline-block;
     flex: 2;
   }
   h2 {
@@ -82,36 +83,41 @@
   }
 }
 
-
-
-
 .card-1 {
-  position: relative;
-  background: url(/lib/img/beer-01.jpeg)center center no-repeat;
-  background-size: cover;
   color: #580404;
-  opacity: .5;
+  background-image: linear-gradient(-180deg, #FFD78B 0%, $card-1-background-color 68%);
+
+  .card-1-image {
+    background: url(/lib/img/beer-01.jpeg)center center no-repeat;
+    background-size: cover;
+  }
   button:hover {
     background-color: desaturate(darken($card-1-background-color, 30%), 50%);
   }
-}
-.card-1:before{
-  background-image: linear-gradient(-180deg, #FFD78B 0%, $card-1-background-color 68%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .card-2 {
   background-image: linear-gradient(-180deg, #AD9E81 0%, $card-2-background-color 68%);
   color: #F9D276;
+
+  .card-2-image {
+    background: url(/lib/img/beer-02.jpeg)center center no-repeat;
+    background-size: cover;
+  }
   button:hover {
     background-color: darken($card-2-background-color, 10%);
   }
+}
 
+.card-3 {
+  background-image: linear-gradient(-180deg, $card-3-secondary-color 0%, $card-3-background-color 68%);
+  color: $card-3-main-font;
+
+  .card-3-image {
+    background: url(/lib/img/beer-02.jpeg)center center no-repeat;
+    background-size: cover;
+  }
+  button:hover {
+    background-color: darken($card-3-background-color, 10%);
+  }
 }
